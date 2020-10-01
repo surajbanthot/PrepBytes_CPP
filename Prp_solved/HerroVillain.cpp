@@ -1,47 +1,50 @@
 // Question from Math part of prepbytes
 //Name as Hero Villain
 
-//Hero Villain 
+//Hero Villain
 //https://mycode.prepbytes.com/problems/maths/DVDALL
 //Ankit Surwade
 
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
-int gcd(int n,int m){
-    
-    if(n==0)
+int gcd(int n, int m)
+{
+
+  if (n == 0)
     return m;
-    
-    if(m==0)
+
+  if (m == 0)
     return n;
-    
-    return gcd(m,n%m);
-  }
-  int main()
+
+  return gcd(m, n % m);
+}
+int main()
+{
+  //write your code here
+  int t;
+  cin >> t;
+  while (t--)
   {
-    //write your code here
-    int t;
-    cin>>t;
-    while(t--){
-      int n,count=0;
-      cin>>n;
-      int arr[n];
-      for(int i=0;i<n;i++){
-      cin>>arr[i];
-      }
-    int w=0;
-    for(int i=0;i<n;i++)
+    int n, count = 0;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-      w=(gcd(w,arr[i]));
+      cin >> arr[i];
     }
-    for(int i=1;i<=w;i++){
-      if(w%i==0)
-      count++;
+    int w = 0;
+    for (int i = 0; i < n; i++)
+    {
+      w = (gcd(w, arr[i]));
     }
-    cout<<count<<endl;
+    for (int i = 1; i <= w; i++)
+    {
+      if (w % i == 0)
+        count++;
     }
-    
-    return 0;
+    cout << count << endl;
   }
+
+  return 0;
+}
