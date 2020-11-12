@@ -1,26 +1,26 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 void printNum(int n)
 {
-    cout<<n<<" ";
-    if(n<=0)
-    return;
-    printNum(n-5);
-    cout<<n<<" ";
+    cout << n << " ";
+    if (n <= 0)
+        return;
+    printNum(n - 5);
+
+    cout << n << " ";
 }
 
 int main()
 {
     int t;
-    cin>>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
         int n;
-        cin>>n;
+        cin >> n;
         printNum(n);
-        cout<<endl;
-
+        cout << endl;
     }
     return 0;
 }
